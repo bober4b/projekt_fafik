@@ -4,7 +4,7 @@ using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
-namespace TutorialBot
+namespace fafikspace
 {
     class Program
     {
@@ -30,7 +30,7 @@ namespace TutorialBot
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            string token = "MTEyNjA4NTM2NDY3NTc5Mjk5NQ.Gn4COs.7iqwdNTZ3B4sE0mdJ640kOCiWQhszJYWP5kFYU";
+            string token = "";
 
             _client.Log += _client_Log;
 
@@ -58,15 +58,15 @@ namespace TutorialBot
 
         private async Task HandleCommandAsync(SocketMessage arg)
         {
-            var message = arg as SocketUserMessage;
+            var message = (SocketUserMessage)arg;
+
             var context = new SocketCommandContext(_client, message);
-            Console.WriteLine("wwwaaawww");
+
             if (message.Author.IsBot) return;
             Console.WriteLine(message.Content);
             int argPos = 0;
             if (message.HasStringPrefix("!", ref argPos))
             {
-                Console.WriteLine("asdasdas");
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
                 if (!result.IsSuccess) Console.WriteLine(result.ErrorReason);
                 if (result.Error.Equals(CommandError.UnmetPrecondition)) await message.Channel.SendMessageAsync(result.ErrorReason);
