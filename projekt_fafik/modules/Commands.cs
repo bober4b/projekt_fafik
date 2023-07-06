@@ -7,7 +7,7 @@ using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
 
-namespace fafikspace.modules
+namespace fafikspace.commands
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
@@ -16,6 +16,10 @@ namespace fafikspace.modules
         {
             await ReplyAsync("pong");
         }
-
+        [Command("chuj")]
+        public async Task Chuj()
+        {
+            await ReplyAsync("Paweł to chuj jebany w dupe i krowa cię jebała");
+        }
     }
 }

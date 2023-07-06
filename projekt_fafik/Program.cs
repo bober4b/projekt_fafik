@@ -3,18 +3,22 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using System.IO;
+using fafikspace.helping;
 
 namespace fafikspace
 {
     class Program
     {
-        static async Task Main(string[] args) => new Program().RunBotAsync().GetAwaiter().GetResult();
+        static void Main(string[] args) => new Program().RunBotAsync().GetAwaiter().GetResult();
 
         private DiscordSocketClient _client;
         private CommandService _commands;
         private IServiceProvider _services;
 
-        
+        private Helping pisz = new Helping();
+
+
 
         public async Task RunBotAsync()
         {
@@ -34,6 +38,7 @@ namespace fafikspace
 
             _client.Log += _client_Log;
 
+
             await RegisterCommandsAsync();
 
             await _client.LoginAsync(TokenType.Bot, token);
@@ -47,6 +52,10 @@ namespace fafikspace
         private Task _client_Log(LogMessage arg)
         {
             Console.WriteLine(arg);
+            if (arg.Message != null)
+            {
+                pisz.log_write(arg);
+            }
             return Task.CompletedTask;
         }
 
@@ -64,9 +73,11 @@ namespace fafikspace
 
             if (message.Author.IsBot) return;
             Console.WriteLine(message.Content);
+
             int argPos = 0;
             if (message.HasStringPrefix("!", ref argPos))
             {
+
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
                 if (!result.IsSuccess) Console.WriteLine(result.ErrorReason);
                 if (result.Error.Equals(CommandError.UnmetPrecondition)) await message.Channel.SendMessageAsync(result.ErrorReason);
