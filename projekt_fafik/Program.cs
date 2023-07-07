@@ -34,7 +34,7 @@ namespace fafikspace
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            string token = "MTEyNjA4NTM2NDY3NTc5Mjk5NQ.GCDO30.6PpTGv8uouywzzwVP9DmMJQhFP0WuV6gnWDjIw";
+            string token = "";
 
             _client.Log += _client_Log;
 
