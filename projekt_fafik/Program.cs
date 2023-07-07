@@ -16,7 +16,7 @@ namespace fafikspace
         private CommandService _commands;
         private IServiceProvider _services;
 
-        private Helping pisz = new Helping();
+        private Helping pisz = new();
 
 
 
@@ -34,7 +34,7 @@ namespace fafikspace
                 .AddSingleton(_commands)
                 .BuildServiceProvider();
 
-            string token = "";
+            string token = "MTEyNjA4NTM2NDY3NTc5Mjk5NQ.GCDO30.6PpTGv8uouywzzwVP9DmMJQhFP0WuV6gnWDjIw";
 
             _client.Log += _client_Log;
 
@@ -72,13 +72,13 @@ namespace fafikspace
             var context = new SocketCommandContext(_client, message);
 
             if (message.Author.IsBot) return;
-            Console.WriteLine(message.Content);
 
             int argPos = 0;
             if (message.HasStringPrefix("!", ref argPos))
             {
 
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
+                if(result.IsSuccess) pisz.log_write(message.Content, message.Author.GlobalName);
                 if (!result.IsSuccess) Console.WriteLine(result.ErrorReason);
                 if (result.Error.Equals(CommandError.UnmetPrecondition)) await message.Channel.SendMessageAsync(result.ErrorReason);
             }

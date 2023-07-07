@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Discord.WebSocket;
-
+using fafikspace.helping;
 namespace fafikspace.commands
 {
     public class Commands : ModuleBase<SocketCommandContext>
     {
+        private Helping sup = new();
+
         [Command("ping")]
         public async Task Ping()
         {
@@ -19,7 +21,18 @@ namespace fafikspace.commands
         [Command("chuj")]
         public async Task Chuj()
         {
-            await ReplyAsync("Paweł to chuj jebany w dupe i krowa cię jebała");
+            await ReplyAsync("Paweł to chuj jebany w dupe i krowa cię jebała ");
+        }
+        [Command("debil")]
+        public async Task Debil()
+        {
+            string path = "C:\\Users\\bober\\Desktop\\fafik pliki\\pawel.txt";
+            int x = sup.stat_R(path);
+            if (x == -1) return;
+            x = x + 1;
+            await ReplyAsync($"Paweł jest DEBILEM {x} razy :DD");
+            sup.stat_W(path, x);
+
         }
     }
 }
