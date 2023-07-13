@@ -5,6 +5,9 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using System.IO;
 using fafikspace.helping;
+using Victoria;
+using fafikspace.services;
+using fafikspace.musicmodule;
 
 namespace fafikspace
 {
@@ -16,25 +19,32 @@ namespace fafikspace
         private CommandService _commands;
         private IServiceProvider _services;
 
-        private Helping pisz = new();
+
+        private readonly Helping pisz = new();
 
 
 
         public async Task RunBotAsync()
         {
-            var config = new DiscordSocketConfig()
+
+            _client = new DiscordSocketClient(new DiscordSocketConfig
             {
-                GatewayIntents = GatewayIntents.All
-            };
-            _client = new DiscordSocketClient(config);
+                AlwaysDownloadUsers = true,
+                MessageCacheSize = 50,
+                LogLevel = LogSeverity.Debug
+            }) ;
             _commands = new CommandService();
 
             _services = new ServiceCollection()
                 .AddSingleton(_client)
                 .AddSingleton(_commands)
+                .AddSingleton<AudioServices>()
+                .AddSingleton<LavaRestClient>()
+                .AddSingleton<LavaSocketClient>()
+                .AddSingleton<AudioServices>()
                 .BuildServiceProvider();
 
-            string token = "";
+            string token = "token";
 
             _client.Log += _client_Log;
 
@@ -44,6 +54,8 @@ namespace fafikspace
             await _client.LoginAsync(TokenType.Bot, token);
 
             await _client.StartAsync();
+
+            await _services.GetRequiredService<AudioServices>().InitializeAsync();
 
             await Task.Delay(-1);
 
@@ -78,7 +90,7 @@ namespace fafikspace
             {
 
                 var result = await _commands.ExecuteAsync(context, argPos, _services);
-                if(result.IsSuccess) pisz.log_write(message.Content, message.Author.GlobalName);
+                if(result.IsSuccess) pisz.log_write(message.Content, message.Author.Username);
                 if (!result.IsSuccess) Console.WriteLine(result.ErrorReason);
                 if (result.Error.Equals(CommandError.UnmetPrecondition)) await message.Channel.SendMessageAsync(result.ErrorReason);
             }

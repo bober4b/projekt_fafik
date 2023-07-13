@@ -29,7 +29,7 @@ namespace fafikspace.commands
             string path = "C:\\Users\\bober\\Desktop\\fafik pliki\\pawel.txt";
             int x = sup.stat_R(path);
             if (x == -1) return;
-            x = x + 1;
+            x++;
             await ReplyAsync($"Paweł jest DEBILEM {x} razy :DD");
             sup.stat_W(path, x);
 

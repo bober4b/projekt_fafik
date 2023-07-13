@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/projekt_fafik/Lavalink.jar
+/projekt_fafik/application.yml

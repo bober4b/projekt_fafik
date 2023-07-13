@@ -14,10 +14,8 @@ namespace fafikspace.helping
         {
 
             string filepath = "C:\\Users\\bober\\Desktop\\fafik pliki\\fafik log.txt";
-            using (StreamWriter writer = File.AppendText(filepath))
-            {
-                writer.WriteLine(arg);
-            }
+            using StreamWriter writer = File.AppendText(filepath);
+            writer.WriteLine(arg);
         }
         public void log_write(string log)
         {
@@ -26,10 +24,8 @@ namespace fafikspace.helping
 
             log =string.Format("{0:HH:mm:ss}",dt)+" system      " + log;
             Console.WriteLine(log);
-            using (StreamWriter writer = File.AppendText(filepath))
-            {
-                writer.WriteLine(log);
-            }
+            using StreamWriter writer = File.AppendText(filepath);
+            writer.WriteLine(log);
         }
         public void log_write(string log, string autor)
         {
@@ -37,31 +33,29 @@ namespace fafikspace.helping
             DateTime dt = DateTime.Now;
             log = string.Format("{0:HH:mm:ss}", dt) + $" {autor}      " + log;
             Console.WriteLine(log);
-            using (StreamWriter writer = File.AppendText(filepath))
-            {
-                writer.WriteLine(log);
-            }
+            using StreamWriter writer = File.AppendText(filepath);
+            writer.WriteLine(log);
         }
         public int stat_R(string path)
         {
-            string x = "";
+            string x;
             try
             {
                 StreamReader reader = new (path);
                 x = reader.ReadLine();
                 reader.Close();
             }
-            catch(Exception e)
+            catch
             {
                 log_write("Błąd odczytu pliku!!");
                 return -1;
             }
-            int wyn = 0;
+            int wyn;
             try
             {
                 wyn = Int32.Parse(x);
             }
-            catch(Exception e)
+            catch
             {
                 log_write("Błąd wartości!!!");
                 return -1;
