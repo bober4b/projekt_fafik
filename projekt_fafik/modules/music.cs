@@ -9,7 +9,7 @@ using Discord.WebSocket;
 using fafikspace.helping;
 using Victoria;
 using fafikspace.services;
-using fafikspace.helping;
+
 
 
 
@@ -24,6 +24,7 @@ namespace fafikspace.musicmodule
         {
             _musicService = musicService;
             help = new Helping();
+            
         }
 
         [Command("Join")]
@@ -31,16 +32,21 @@ namespace fafikspace.musicmodule
         {
             var user = Context.User as SocketGuildUser;
 
-            if(user.VoiceChannel is null)
+            if (user.VoiceChannel is null)
             {
                 await ReplyAsync("musisz być na jakimś kanale!!");
                 help.log_write("nie ma użytkownika na kanale");
                 return;
 
             }
+            //else if(1==1)
+           // {
+
+           // }
             else
             {
                 await _musicService.ConnectAsync(user.VoiceChannel, Context.Channel as ITextChannel);
+                Task task = _musicService.EndTimeNextAsync(Context.Guild.Id);
                 await ReplyAsync($"Dołądczyłem na {user.VoiceChannel.Name}");
             }
         }
@@ -82,6 +88,11 @@ namespace fafikspace.musicmodule
         [Command("Resume")]
         public async Task Resume()
             => await ReplyAsync(await _musicService.ResumeAsync(Context.Guild.Id));
+        [Command ("Queue")]
+        public async Task Queue()
+            => await ReplyAsync(await _musicService.QueueAsync(Context.Guild.Id));
+
+      
 
     }
 }
