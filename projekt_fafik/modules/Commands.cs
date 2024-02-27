@@ -18,23 +18,7 @@ namespace fafikspace.commands
         {
             await ReplyAsync("pong");
         }
-        [Command("chuj")]
-        public async Task Chuj()
-        {
-            await ReplyAsync("Paweł to chuj jebany w dupe i krowa cię jebała ");
-        }
-        [Command("debil")]
-        public async Task Debil()
-        {
-            string path = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\pawel.txt";
-            int x = sup.stat_R(path);
-            if (x == -1) return;
-            x++;
-            await ReplyAsync($"Paweł jest DEBILEM {x} razy :DD");
-            
-            sup.stat_W(path, x);
-
-        }
+        
         [Command("help")]
         public async Task Help()
         {
