@@ -13,25 +13,25 @@ namespace fafikspace.helping
         public void log_write(LogMessage arg)
         {
 
-            string filepath = "C:\\Users\\bober\\Desktop\\fafik pliki\\fafik log.txt";
+            string filepath = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\fafik log.txt";
             using StreamWriter writer = File.AppendText(filepath);
             writer.WriteLine(arg);
         }
         public void log_write(string log)
         {
-            string filepath = "C:\\Users\\bober\\Desktop\\fafik pliki\\fafik log.txt";
+            string filepath = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\fafik log.txt";
             DateTime dt = DateTime.Now;
 
-            log =string.Format("{0:HH:mm:ss}",dt)+" system      " + log;
+            log =string.Format("{0:G}", dt)+" system      " + log;
             Console.WriteLine(log);
             using StreamWriter writer = File.AppendText(filepath);
             writer.WriteLine(log);
         }
         public void log_write(string log, string autor)
         {
-            string filepath = "C:\\Users\\bober\\Desktop\\fafik pliki\\fafik log.txt";
+            string filepath = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\fafik log.txt";
             DateTime dt = DateTime.Now;
-            log = string.Format("{0:HH:mm:ss}", dt) + $" {autor}      " + log;
+            log = string.Format("{0:G}", dt) + $" {autor}      " + log;
             Console.WriteLine(log);
             using StreamWriter writer = File.AppendText(filepath);
             writer.WriteLine(log);
@@ -61,6 +61,17 @@ namespace fafikspace.helping
                 return -1;
             }
             return wyn;
+        }
+        public string help(string path)
+        {
+            StreamReader reader = new(path);
+            string spis = "";
+            while(!reader.EndOfStream)
+            {
+                spis += $"{reader.ReadLine()}\n";
+            }
+            reader.Close();
+            return spis;
         }
 
         public void stat_W(string path, int wartosc)

@@ -26,13 +26,23 @@ namespace fafikspace.commands
         [Command("debil")]
         public async Task Debil()
         {
-            string path = "C:\\Users\\bober\\Desktop\\fafik pliki\\pawel.txt";
+            string path = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\pawel.txt";
             int x = sup.stat_R(path);
             if (x == -1) return;
             x++;
             await ReplyAsync($"Paweł jest DEBILEM {x} razy :DD");
+            
             sup.stat_W(path, x);
 
         }
+        [Command("help")]
+        public async Task Help()
+        {
+            string Path = "C:\\Users\\bober\\OneDrive\\Pulpit\\projekt_fafik\\projekt_fafik\\fafik pliki\\help.txt";
+            string wyn = sup.help(Path);
+            await ReplyAsync(wyn);
+
+        }
+        
     }
 }

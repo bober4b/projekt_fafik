@@ -1,0 +1,36 @@
+Join: Ta komenda służy do dołączania bota do kanału głosowego, na którym znajduje się użytkownik, który wydał komendę.
+Wywołanie: !Join
+
+Leave: Komenda ta pozwala botowi opuścić aktualnie połączony kanał głosowy.
+Wywołanie: !Leave
+
+Play: Ta komenda umożliwia rozpoczęcie odtwarzania muzyki na kanale głosowym.
+Wywołanie: !Play <nazwa piosenki lub link>
+
+Stop: Komenda służy do zatrzymania odtwarzania aktualnej muzyki na kanale głosowym.
+Wywołanie: !Stop
+
+Skip: Komenda ta pozwala na pominięcie aktualnie odtwarzanej piosenki na kanale głosowym.
+Wywołanie: !Skip
+
+Volume: Ta komenda umożliwia regulowanie głośności odtwarzanej muzyki na kanale głosowym.
+Wywołanie: !Volume <nowa wartość głośności>
+
+Pause: Komenda służy do wstrzymania odtwarzania aktualnej muzyki na kanale głosowym.
+Wywołanie: !Pause
+
+Resume: Komenda ta pozwala na wznowienie odtwarzania zatrzymanej muzyki na kanale głosowym.
+Wywołanie: !Resume
+
+Queue: Komenda służy do wyświetlania kolejki odtwarzania na kanale głosowym.
+Wywołanie: !Queue
+
+ping: Ta komenda jest przykładem podstawowej komendy. Bot odpowiada na tę komendę odpowiedzią "pong".
+Wywołanie: !ping
+
+chuj: Komenda używana w celu wysłania obraźliwej wiadomości.
+Wywołanie: !chuj
+
+debil: Ta komenda służy do zliczania ilości wystąpień pewnego wyrażenia ("Paweł jest DEBILEM") w pliku tekstowym.
+Wywołanie: !debil
+

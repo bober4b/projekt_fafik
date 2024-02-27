@@ -40,6 +40,7 @@ namespace fafikspace.client
             _configService= new ConfigService();
             _config = _configService.GetConfig();
         }
+        
 
         public async Task InitializeAsync()
         {
@@ -48,7 +49,7 @@ namespace fafikspace.client
             _client.Log += LogAsync;
             _services = SetupServices();
 
-
+            await _client.SetGameAsync("!help");
             var cmdHandler = new CommandHandler(_client, _cmdService, _services);
             await cmdHandler.InitializeAsync();
 

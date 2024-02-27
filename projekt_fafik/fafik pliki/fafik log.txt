@@ -1,0 +1,155 @@
+23:21:43 Victoria    Connecting to ws://127.0.0.1:2333/.
+23:21:43 Victoria    WebSocket connection established!
+23:21:43 Victoria    Missing handling of ready OP code.
+27.10.2023 23:21:48 bober4b      !debil
+27.10.2023 23:21:54 bober4b      !chuj
+23:19:42 Victoria    Connecting to ws://127.0.0.1:2333/.
+23:19:42 Victoria    WebSocket connection established!
+23:19:42 Victoria    Missing handling of ready OP code.
+07.12.2023 23:19:57 bober4b      !help
+07.12.2023 23:20:05 bober4b      !volume
+07.12.2023 23:20:12 bober4b      !volume 5
+07.12.2023 23:20:16 bober4b      !join
+07.12.2023 23:20:20 bober4b      !volume 5
+07.12.2023 23:20:32 bober4b      !play jakobiany geometryczne
+07.12.2023 23:21:22 bober4b      !play hitler sing human
+07.12.2023 23:21:30 bober4b      !queue
+07.12.2023 23:21:42 bober4b      !play diho pirat
+07.12.2023 23:24:54 bober4b      !skip
+07.12.2023 23:25:11 bober4b      !paly diho pirat
+07.12.2023 23:25:17 bober4b      !play diho pirat
+07.12.2023 23:27:07 bober4b      !play zwariowana noc dawid jasper
+07.12.2023 23:31:57 bober4b      !play buka 1 moment
+07.12.2023 23:32:12 bober4b      !kaen alter ego
+07.12.2023 23:32:22 bober4b      !play kaen alter ego
+07.12.2023 23:32:25 bober4b      !skip
+07.12.2023 23:45:17 bober4b      !play wesoły numer o smutnych rzeczach
+07.12.2023 23:45:27 bober4b      !skip
+07.12.2023 23:51:42 bober4b      !play jokohama
+07.12.2023 23:51:46 bober4b      !skip
+07.12.2023 23:52:06 bober4b      !play magnolia
+07.12.2023 23:52:14 bober4b      !play magnolia gibs
+07.12.2023 23:52:38 bober4b      !play magnolia opał gibbs
+07.12.2023 23:52:42 bober4b      !skip
+07.12.2023 23:52:45 bober4b      !skip
+07.12.2023 23:52:49 bober4b      !skip
+07.12.2023 23:53:55 bober4b      !debil
+07.12.2023 23:54:09 bober4b      !chuj
+20:17:03 Victoria    Connecting to ws://127.0.0.1:2333/.
+20:17:03 Victoria    WebSocket connection established!
+20:17:03 Victoria    Missing handling of ready OP code.
+08.12.2023 20:19:21 bober4b      !join
+08.12.2023 20:19:28 bober4b      !volume 5
+08.12.2023 20:19:38 bober4b      !play hard flex drive
+08.12.2023 20:22:25 bober4b      !debil
+08.12.2023 20:22:56 bober4b      !play matrioszki kukon
+08.12.2023 20:26:32 bober4b      !play zorza quebo
+08.12.2023 20:28:00 bober4b      !debil
+08.12.2023 20:29:43 bober4b      !play london rain kukon
+08.12.2023 20:32:29 bober4b      !play nicea
+08.12.2023 20:35:34 bober4b      !play houdini lordofon
+08.12.2023 20:38:41 bober4b      !play stop, nadiu
+08.12.2023 20:38:52 bober4b      !skip
+08.12.2023 20:39:16 bober4b      !play awinion kombi
+08.12.2023 20:48:02 bober4b      !play supro daria
+08.12.2023 20:48:10 bober4b      !skip
+08.12.2023 20:50:23 bober4b      !play blah blah blah
+08.12.2023 20:52:07 bober4b      !debil
+08.12.2023 20:53:41 bober4b      !play https://www.youtube.com/watch?v=Ia5tn-pnaFI
+08.12.2023 20:55:23 bober4b      !skip
+08.12.2023 20:58:59 bober4b      !play https://www.youtube.com/watch?v=lKvD-gRNke0
+08.12.2023 20:59:43 bober4b      !play https://www.youtube.com/watch?v=isDOgTf-B8s
+08.12.2023 21:00:09 bober4b      !play https://www.youtube.com/watch?v=033Z3Flb58A
+08.12.2023 21:03:25 sniper monkee      !play tyszka bruce lee
+08.12.2023 21:03:33 bober4b      !play perła to eksportowy towar
+08.12.2023 21:06:21 bober4b      !play https://www.youtube.com/watch?v=WVzFbsk6dUk
+08.12.2023 21:07:53 bober4b      !play https://www.youtube.com/watch?v=qABc2CJOKAE
+08.12.2023 21:09:31 bober4b      !skip
+08.12.2023 21:10:19 bober4b      !play człowiek z dziurą zamiast krtani
+08.12.2023 21:14:54 bober4b      !play https://www.youtube.com/watch?v=eyAskkRXIos&t=21s
+18:24:53 Victoria    Connecting to ws://127.0.0.1:2333/.
+18:24:53 Victoria    WebSocket connection established!
+18:24:53 Victoria    Missing handling of ready OP code.
+16.12.2023 18:24:55 bober4b      !join
+16.12.2023 18:25:00 bober4b      !volume 2
+16.12.2023 18:25:03 bober4b      !volum 5
+16.12.2023 18:25:08 bober4b      !volume 5
+16.12.2023 18:25:24 bober4b      !play toxicity system of a down
+20:44:08 Victoria    Connecting to ws://127.0.0.1:2333/.
+20:44:08 Victoria    WebSocket connection established!
+20:44:09 Victoria    Missing handling of ready OP code.
+12.01.2024 20:44:38 bober4b      !play erotyczny pif paf
+12.01.2024 20:44:42 bober4b      !join
+12.01.2024 20:44:47 bober4b      !play erotyczny pif paf
+12.01.2024 20:44:54 bober4b      !volume 5
+12.01.2024 20:45:06 bober4b      !play bella ciao
+12.01.2024 20:48:14 _pawlak      !play ciao siciliano
+12.01.2024 20:50:50 bober4b      !queue
+12.01.2024 20:50:54 bober4b      !skip
+12.01.2024 20:56:03 bober4b      !play zwariowana noc dawid jasper
+12.01.2024 20:58:37 bober4b      !play marcepan
+12.01.2024 20:59:06 bober4b      !play https://www.youtube.com/watch?v=KY_sjfJFazM
+12.01.2024 21:13:53 bober4b      !queue
+12.01.2024 21:14:03 bober4b      !play dj pierdolony rak wątroby
+12.01.2024 21:14:13 bober4b      !skip
+12.01.2024 21:14:59 bober4b      !play https://www.youtube.com/watch?v=TQB2atEkXn8
+12.01.2024 21:15:02 bober4b      !skip
+12.01.2024 21:52:37 bober4b      !play https://www.youtube.com/watch?v=6gEQJHtfZUI
+17:41:44 Victoria    Connecting to ws://127.0.0.1:2333/.
+17:41:44 Victoria    WebSocket connection established!
+17:41:45 Victoria    Missing handling of ready OP code.
+19.01.2024 17:41:58 bober4b      !join
+19.01.2024 17:43:22 bober4b      !volume 5
+19.01.2024 17:43:26 bober4b      !play https://www.youtube.com/watch?v=XYKUeZQbMF0
+17:53:09 Victoria    WebSocket disconnected! Disposing all connected players.:
+System.Exception: WebSocket connection was closed
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Discord.Net.WebSockets.DefaultWebSocketClient.RunAsync(CancellationToken cancelToken)
+   --- End of inner exception stack trace ---
+   at Discord.ConnectionManager.<>c__DisplayClass29_0.<<StartAsync>b__0>d.MoveNext()
+19.01.2024 18:00:13 bober4b      !play https://www.youtube.com/watch?v=aR-KAldshAE
+19.01.2024 18:00:19 bober4b      !join
+19.01.2024 18:00:23 bober4b      !play https://www.youtube.com/watch?v=aR-KAldshAE
+18:00:52 Victoria    WebSocket disconnected! Disposing all connected players.:
+System.Exception: WebSocket connection was closed
+ ---> System.Net.WebSockets.WebSocketException (0x80004005): The remote party closed the WebSocket connection without completing the close handshake.
+   at System.Net.WebSockets.ManagedWebSocket.ThrowIfEOFUnexpected(Boolean throwOnPrematureClosure)
+   at System.Net.WebSockets.ManagedWebSocket.EnsureBufferContainsAsync(Int32 minimumRequiredBytes, CancellationToken cancellationToken, Boolean throwOnPrematureClosure)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.WebSockets.ManagedWebSocket.ReceiveAsyncPrivate[TResult](Memory`1 payloadBuffer, CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at System.Threading.Tasks.ValueTask`1.ValueTaskSourceAsTask.<>c.<.cctor>b__4_0(Object state)
+--- End of stack trace from previous location ---
+   at Discord.Net.WebSockets.DefaultWebSocketClient.RunAsync(CancellationToken cancelToken)
+   --- End of inner exception stack trace ---
+   at Discord.ConnectionManager.<>c__DisplayClass29_0.<<StartAsync>b__0>d.MoveNext()
+21:28:03 Victoria    Connecting to ws://127.0.0.1:2333/.
+21:28:03 Victoria    WebSocket connection established!
+21:28:03 Victoria    Missing handling of ready OP code.
+19.01.2024 21:28:13 bober4b      !join
+19.01.2024 21:28:23 bober4b      !volume 5
+19.01.2024 21:28:54 bober4b      !play comfortable numb
+19.01.2024 21:28:59 bober4b      !skip
+19.01.2024 21:29:11 bober4b      !play comfortable numb pink floyd
+19.01.2024 21:29:14 bober4b      !skip
+19.01.2024 21:39:47 bober4b      !join
+19.01.2024 21:39:52 bober4b      !leave
+19.01.2024 21:39:56 bober4b      !join
+19.01.2024 21:40:13 bober4b      !play no surprises radiohead
+19.01.2024 21:40:32 bober4b      !volume 5
+19.01.2024 21:44:41 bober4b      !play https://www.youtube.com/watch?v=EEvopkbc4FE
+21:49:08 Victoria    WebSocket disconnected! Disposing all connected players.:
+System.Exception: Server requested a reconnect
+   at Discord.ConnectionManager.<>c__DisplayClass29_0.<<StartAsync>b__0>d.MoveNext()
+21:49:10 Victoria    Connecting to ws://127.0.0.1:2333/.
+21:49:10 Victoria    WebSocket connection established!
+21:49:10 Victoria    Missing handling of ready OP code.
+22:49:41 Victoria    Lavalink died. Disposed all players.
+22:49:41 Victoria    Attempt #1. Next retry in 10 seconds.

@@ -4,6 +4,7 @@ using System;
 using System.Reflection;
 using System.Threading.Tasks;
 using Discord;
+using fafikspace.helping;
 
 namespace fafikspace.client
 {
@@ -38,9 +39,9 @@ namespace fafikspace.client
             int argPos = 0;
             if (message.HasStringPrefix("!", ref argPos))
             {
-
+                Helping pisz = new();
                 var result = await _cmdService.ExecuteAsync(context, argPos, _services);
-                //if (result.IsSuccess) pisz.log_write(message.Content, message.Author.Username);
+                pisz.log_write(message.Content, message.Author.Username);
                 if (!result.IsSuccess) Console.WriteLine(result.ErrorReason);
                 if (result.Error.Equals(CommandError.UnmetPrecondition)) await message.Channel.SendMessageAsync(result.ErrorReason);
             }

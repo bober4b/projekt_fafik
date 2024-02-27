@@ -7,23 +7,23 @@ using System.Diagnostics;
 
 namespace projekt_fafik.trackended
 {
-    public class trackended
+    public class Trackended
     {
-        Stopwatch stopwatch = new Stopwatch();
+        readonly Stopwatch stopwatch = new();
         public bool playnext=true;
 
-        public void start()
+        public void Start()
             =>stopwatch.Start();
-        public void stop()
+        public void Stop()
             =>stopwatch.Stop();
-        public void restart()
+        public void Restart()
             =>stopwatch.Restart();
-        public long mili()
+        public long Mili()
         {
             return (stopwatch.ElapsedMilliseconds);
 
         }
-        public bool ison()
+        public bool Ison()
             => stopwatch.IsRunning;
 
     }

@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <None Remove="Lavalink.jar" />
+    <None Remove="ngrok.exe" />
   </ItemGroup>
 
   <ItemGroup>

@@ -17,8 +17,8 @@ namespace fafikspace.musicmodule
 {
     public sealed class Music : ModuleBase<SocketCommandContext>
     {
-        private AudioServices _musicService;
-        private Helping help;
+        private readonly AudioServices _musicService;
+        private readonly Helping help;
 
         public Music(AudioServices musicService)
         {
@@ -46,8 +46,8 @@ namespace fafikspace.musicmodule
             else
             {
                 await _musicService.ConnectAsync(user.VoiceChannel, Context.Channel as ITextChannel);
-                Task task = _musicService.EndTimeNextAsync(Context.Guild.Id);
-                await ReplyAsync($"Dołądczyłem na {user.VoiceChannel.Name}");
+                _ = _musicService.EndTimeNextAsync(Context.Guild.Id);
+                await ReplyAsync($"Dołączyłem na {user.VoiceChannel.Name}");
             }
         }
         [Command("leave")]
@@ -91,8 +91,11 @@ namespace fafikspace.musicmodule
         [Command ("Queue")]
         public async Task Queue()
             => await ReplyAsync(await _musicService.QueueAsync(Context.Guild.Id));
-
-      
+        [Command("R")]
+        public async Task Restart()
+        {
+           await _musicService.r();
+        }
 
     }
 }

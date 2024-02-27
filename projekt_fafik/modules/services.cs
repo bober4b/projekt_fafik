@@ -20,7 +20,7 @@ namespace fafikspace.services
         private readonly LavaSocketClient _lavaSocketClient;
         private readonly DiscordSocketClient _client;
         private readonly Helping _logService;
-        public trackended timer;
+        public Trackended timer;
 
 
         public AudioServices(LavaRestClient lavaRestClient, DiscordSocketClient client, LavaSocketClient lavaSocketClient)
@@ -29,7 +29,7 @@ namespace fafikspace.services
             _lavaRestClient=lavaRestClient;
             _lavaSocketClient=lavaSocketClient;
             _logService = new();
-            timer = new trackended();
+            timer = new Trackended();
         }
         public Task InitializeAsync()
         {
@@ -48,7 +48,7 @@ namespace fafikspace.services
 
         public async Task LeaveAsync(SocketVoiceChannel voiceChannel)
         {
-            timer.stop();
+            timer.Stop();
             await _lavaSocketClient.DisconnectAsync(voiceChannel);
         }
 
@@ -71,8 +71,7 @@ namespace fafikspace.services
             if(_player.IsPlaying)
             {
                 _player.Queue.Enqueue(track);
-                if (!timer.ison())
-                    timer.start();
+                
                 timer.playnext = true;
                 return $"{track.Title} został dodany do kolejki";
                 
@@ -80,8 +79,7 @@ namespace fafikspace.services
             else
             {
                 await _player.PlayAsync(track);
-                if (!timer.ison())
-                    timer.start();
+                timer.Restart();
                 return $"właśnie gra: {track.Title}";
 
             }
@@ -105,8 +103,7 @@ namespace fafikspace.services
                 return "kolejka jest pusta!";
             var oldTrack = _player.CurrentTrack;
             await _player.SkipAsync();
-            Task.Delay(TimeSpan.FromSeconds(1));
-            timer.restart();
+            timer.Restart();
             return $"skipped: {oldTrack.Title}\n Teraz gram: {_player.CurrentTrack.Title}";
                 
         }
@@ -139,13 +136,13 @@ namespace fafikspace.services
             if (!_player.IsPaused)
             {
                 await _player.PauseAsync();
-                timer.stop();
-                return "Muzyka została zapauzowana";
+                timer.Stop();
+                return "Muzyka została wstrzymana";
             }
             else
             {
                 await _player.ResumeAsync();
-                timer.start();
+                timer.Start();
                 return "muzyka została wznowiona";
             }
 
@@ -163,7 +160,7 @@ namespace fafikspace.services
             if (_player.IsPaused)
             {
                 await _player.ResumeAsync();
-                timer.start();
+                timer.Start();
                 return "muzyka została wznowiona";
             }
             else
@@ -181,19 +178,19 @@ namespace fafikspace.services
         public async Task TrackFinished(LavaPlayer player, LavaTrack track, TrackEndReason reason)
         {
 
-            //await player.TextChannel.SendMessageAsync("brak piosenek w kolejce!!!");
+            
             if (!reason.ShouldPlayNext())
                 return;
 
-            if(!player.Queue.TryDequeue(out var item) || !(item is LavaTrack nextTrack) )
+            if(!player.Queue.TryDequeue(out var item) || item is not LavaTrack nextTrack )
             {
                 await player.TextChannel.SendMessageAsync("brak piosenek w kolejce!!!");
-                timer.stop();
+                timer.Stop();
                 await player.StopAsync();
 
                 return;
             }
-            timer.restart();
+            timer.Restart();
             timer.playnext = true;
             await player.PlayAsync(nextTrack);
             await player.TextChannel.SendMessageAsync($"teraz gramy: {player.CurrentTrack.Title}");
@@ -231,7 +228,7 @@ namespace fafikspace.services
             bool check = false;
             while (true)
             {
-                if (_player.CurrentTrack is not null && timer.mili() >= _player.CurrentTrack.Length.TotalMilliseconds+1000 )
+                if (_player.CurrentTrack is not null && timer.Mili() >= _player.CurrentTrack.Length.TotalMilliseconds+1000 )
                 {
 
                     
@@ -242,44 +239,26 @@ namespace fafikspace.services
 
                     if (!_player.Queue.TryDequeue(out var item) || !(item is LavaTrack nextTrack) )
                     {
-                        //await Task.Delay(TimeSpan.FromSeconds(1));
-                        //await _player.TextChannel.SendMessageAsync("brak piosenek w kolejce!!!");
+                        
                         timer.playnext = false;
-                        timer.stop();
-                        //await _player.StopAsync();
-                        check = true;
+                        timer.Stop();
+                        
                     }
-                   /* else
-                    {
-                        LavaTrack track = _player.CurrentTrack;
-                        var reason = TrackEndReason.Finished;
-                        await TrackFinished(_player, track, reason);
-                    }*/
+                   
                   
 
                 }
-                /*else if(_player is not null &&_player.Queue.Count==0 && check)
-                {
-
-                    await _player.TextChannel.SendMessageAsync("brak piosenek w kolejce11!!!");
-                    check = false;
-
-                }*/
+                
 
                 await Task.Delay(TimeSpan.FromSeconds(1));
-                /*else if (!_player.Queue.TryDequeue(out var item) || !(item is LavaTrack nextTrack))
-                    {
-                        await _player.TextChannel.SendMessageAsync("brak piosenek w kolejce!!!");
-                        await Task.Delay(TimeSpan.FromSeconds(2));
-
-                }
-                else
-                    {
-                        await Task.Delay(TimeSpan.FromSeconds(2));
-                    }*/
+               
             }
 
             }
+        public async Task r()
+        {
+            timer.Restart();
+        }
 
 
         private async Task LogAsync(LogMessage logMessage)
